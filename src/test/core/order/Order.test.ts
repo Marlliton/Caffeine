@@ -17,4 +17,31 @@ describe("Order", () => {
     expect(order).toBeTruthy()
   });
 
+  it("should be able to add one more coffee", () => {
+    const order = new Order({
+      coffee: new Coffee({
+        category: ["tradicional"],
+        description: "Café preto",
+        price: 20.00,
+        title: "Puro"
+      }),
+      quantity: 2
+    }).increaseAmount()
+
+    expect(order.quantity).toEqual(3)
+  })
+
+  it("should be able to remove a coffee", () => {
+    const order = new Order({
+      coffee: new Coffee({
+        category: ["tradicional"],
+        description: "Café preto",
+        price: 20.00,
+        title: "Puro"
+      }),
+      quantity: 2
+    }).decreaseAmount()
+
+    expect(order.quantity).toEqual(1)
+  })
 });
