@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const HeaderContainer = styled.header`
   width: 100%;
@@ -21,10 +21,9 @@ export const HeaderActions = styled.div`
 
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: 0.5rem;
 
-    padding: .5rem;
-
+    padding: 0.5rem;
 
     border-radius: 6px;
     border: 1px solid ${props => props.theme["black-900"]};
@@ -47,7 +46,7 @@ export const HeaderActions = styled.div`
     color: ${props => props.theme["yellow-700"]};
 
     &:focus {
-      border: 2px solid ${props => props.theme["yellow-700"]}
+      border: 2px solid ${props => props.theme["yellow-700"]};
     }
   }
 `;
@@ -67,5 +66,5 @@ export const CartAmount = styled.span`
   width: 1.25rem;
 
   background-color: ${props => props.theme["yellow-700"]};
-  color:  ${props => props.theme.white};
-`
+  color: ${props => props.theme.white};
+`;
