@@ -6,6 +6,7 @@ export interface CoffeeProps extends EntityProps {
   category?: string[];
   description?: string;
   price?: number;
+  urlImage?: string;
 }
 
 export class Coffee extends Entity<Coffee, CoffeeProps> {
@@ -24,6 +25,9 @@ export class Coffee extends Entity<Coffee, CoffeeProps> {
   }
   get price() {
     return this.props.price;
+  }
+  get urlImage() {
+    return this._props.urlImage;
   }
 
   protected validations(): Validation[] {
