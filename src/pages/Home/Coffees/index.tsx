@@ -1,15 +1,15 @@
 import { Coffee } from "./Coffee";
-import { CoffeeContainer } from "./styles";
 import { coffeeList } from "../../../data/coffeeList";
 
 export function Coffees() {
   return (
-    <CoffeeContainer>
-      <h1>Nossos Cafés</h1>
-      <div>
+    <div className="w-full flex flex-col">
+      <h1 className="font-baloo text-xl md:text-4xl font-bold pb-4">Nossos Cafés</h1>
+      <div className="flex flex-wrap justify-center">
         {coffeeList.map(coffee => {
           return (
             <Coffee
+              key={coffee.id}
               category={coffee.category}
               description={coffee.description}
               id={coffee.id}
@@ -20,6 +20,6 @@ export function Coffees() {
           );
         })}
       </div>
-    </CoffeeContainer>
+    </div>
   );
 }

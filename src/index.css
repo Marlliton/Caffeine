@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* @layer base {
+  html, body {
+    @apply font-roboto;
+    @apply antialiased;
+
+    @apply bg-background;
+  }
+
+  input {
+    @apply rounded bg-gray-100 focus:border focus:border-yellow-700;
+  }
+
+  button {
+    @apply border-none;
+  }
+} */

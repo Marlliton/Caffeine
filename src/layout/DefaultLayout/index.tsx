@@ -1,12 +1,11 @@
 import { Outlet } from "react-router-dom";
 import { Header } from "../../components/Header";
-import { LayoutContainer } from "./styles";
 
 export function DefaultLayout() {
   return (
-    <LayoutContainer>
+    <div className="max-w-7xl w-full h-screen my-0 mx-auto flex flex-col px-8">
       <Header />
       <Outlet />
-    </LayoutContainer>
+    </div>
   )
 }

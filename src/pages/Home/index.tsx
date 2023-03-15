@@ -1,12 +1,11 @@
 import { Coffees } from "./Coffees";
 import { Presentation } from "./Presentation";
-import { HomeContainer } from "./styles";
 
 export function Home() {
   return (
-    <HomeContainer>
+    <div className="flex flex-col items-center justify-start h-screen">
       <Presentation />
       <Coffees />
-    </HomeContainer>
-  )
+    </div>
+  );
 }
