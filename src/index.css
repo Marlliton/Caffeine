@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
-/* @layer base {
-  html, body {
+@layer base {
+  html,
+  body {
     @apply font-roboto;
     @apply antialiased;
 
@@ -12,10 +12,20 @@
   }
 
   input {
-    @apply rounded bg-gray-100 focus:border focus:border-yellow-700;
+    @apply rounded border border-brown-200/20 bg-gray-200;
   }
 
   button {
     @apply border-none;
   }
-} */
+}
+
+@layer components {
+  .checkbox-label:has(input) {
+    @apply border-purple-800 bg-purple-200 text-brown-600;
+  }
+}
+
+input {
+  outline: none !important;
+}
