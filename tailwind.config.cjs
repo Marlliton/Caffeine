@@ -33,7 +33,11 @@ module.exports = {
 
       background: "#FAFAFA",
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'info-gradient': 'linear-gradient(to right, #DBAC2C, #C47F17, #8047F8)'
+      }
+    },
   },
   plugins: [],
 };
